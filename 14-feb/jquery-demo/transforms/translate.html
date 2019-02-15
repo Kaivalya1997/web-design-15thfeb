@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    div {
+      width: 300px;
+      height: 100px;
+      background-color: yellow;
+      border: 1px solid black;
+      -ms-transform: translate(50px, 100px);
+      /* IE 9 */
+      -webkit-transform: translate(50px, 100px);
+      /* Safari */
+      transform: translate(200px, 100px) rotate(30deg);
+      /* Standard syntax */
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>The translate() Method</h1>
+  <p>The translate() method moves an element from its current position:</p>
+
+  <div id="foo">
+    This div element is moved 50 pixels to the right, and 100 pixels down from its current position.
+  </div>
+  <script>
+    var count = 0;
+    var index = 1;
+    var elem = document.getElementById("foo");
+    //elem.style.transform ="translate(200px, 400px);"
+    setInterval(function () {
+     
+        count = count + index;
+        elem.style.transform = "translate(500px, 200px) rotate(" + count + "deg) scale("+count*0.1+")";
+        if (count == 90 || count == 0) { index = index * (-1); }
+    
+    }, 50)
+
+  </script>
+</body>
+
+</html>

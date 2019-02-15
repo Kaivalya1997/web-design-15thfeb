@@ -1,0 +1,49 @@
+<html>
+        <!-- <style>
+                #container {
+                  width: 400px;
+                  height: 400px;
+                  position: relative;
+                  left: 800px;
+                  down: 50px;
+                  background: yellow;
+                }
+                #animate {
+                  width: 50px;
+                  height: 50px;
+                  position: absolute;
+                  background: red;
+                }
+        </style> -->
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="D:\tomcat8\webapps\sass\style.css">
+    <title>My song search</title>
+</head>
+
+<body>
+    <h1>Search songs by artist name</h1>
+    <p></p>
+    <div class="alert alert-danger" role="alert" id='error_message'>
+            There was a problem......
+    </div>
+    <div id='textbox'> 
+        Artist name: <input id="name" onkeyup="validate(event)" name='firstname' style="background-color:red" />
+        <input id="ajax" type="button" name="firstname" value="Search" onclick="getOrder(event)" onkeydown="if (event.keyCode == 13){return getOrder(event) }"
+        />
+    </div>
+     
+    <div id='caption'></div>
+    <ol id='tracks'>
+
+    </ol>
+    
+          
+    
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="ajax-jquery.js"></script>
+
+</html>
